@@ -18,13 +18,6 @@ C-Language Library (C-库)
    ```bash
    gcc filename.c -o output_name
    ./output_name
-   
-📝 待办事项
-
-- [ ] 栈 (Stack) 的实现
-- [ ] 队列 (Queue) 的实现
-- [ ] 二叉树 (Binary Tree) 的基本操作
-- [ ] 排序算法 (冒泡、快排等)
 
 Created by yyhdreaM-dot
 
