@@ -7,7 +7,7 @@ C-Language Library (C-库)
 - 数据结构/
   - SqList.c: 顺序表的实现（包括初始化、插入、删除等操作）。
   - LinkList.c: 单链表的实现（包括节点创建、遍历、查找等）。
-
+  - BinaryTree.c`: 二叉树的构建与遍历（前/中/后序），包含深度、结点统计及路径打印。
 🚀 如何运行
 
 这些代码通常包含 main 函数，可以直接编译运行。
@@ -20,9 +20,3 @@ C-Language Library (C-库)
    ./output_name
 
 Created by yyhdreaM-dot
-
-操作步骤
-
-1. 点击页面右侧的铅笔图标（编辑此文件）。
-2. 把上面的 Markdown 代码复制进去。
-3. 滚动到底部，点击绿色的 “提交更改”。
