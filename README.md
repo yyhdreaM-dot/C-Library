@@ -16,8 +16,8 @@ C-Language Library (C-库)
     4. signal_func_ptr_typedef.c：多层嵌套函数指针，演示typedef简化复杂声明。
     5. func_ptr_array_test.c：函数指针数组示例，存储多个同类型运算函数指针。
 
-- LeetCode/Simple
-  力扣简单难度算法题，全部使用纯C语言手写可提交代码
+- LeetCode
+  力扣算法题，全部使用纯C语言手写可提交代码
 
 ## 📌 仓库说明
 1. 所有代码均为本人独立编写，无复制照搬完整答案
