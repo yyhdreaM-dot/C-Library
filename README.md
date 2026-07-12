@@ -14,6 +14,7 @@ C-Language Library (C-库)
     2. pointer_all_test.c：基础指针综合练习，包含普通指针、数组指针、基础函数指针。
     3. zero_addr_func_pointer.c：复杂函数指针语法拆解，仅作语法理解，运行会崩溃。
     4. signal_func_ptr_typedef.c：多层嵌套函数指针，演示typedef简化复杂声明。
+    5. func_ptr_array_test.c：函数指针数组示例，存储多个同类型运算函数指针。
 
 - LeetCode/Simple
   力扣简单难度算法题，全部使用纯C语言手写可提交代码
