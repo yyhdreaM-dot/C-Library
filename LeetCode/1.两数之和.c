@@ -16,6 +16,6 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
             }
         }
     }
-    *returnSize == 0;returnSize为零说明未找到 指针为空
+    *returnSize == 0;//returnSize为零说明未找到 指针为空
     return NULL;
 }
