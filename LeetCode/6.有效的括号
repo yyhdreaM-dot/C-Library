@@ -1,0 +1,35 @@
+#include <string.h>
+#include <stdlib.h>
+#include <stdbool.h>
+bool isValid(char* s) {
+    int len = strlen(s);//获取栈数组长度 最长不会超过字符串长度
+    char* stack = (char*)malloc(sizeof(char) * len);
+    int top = -1;
+    int i;
+    for(i = 0;s[i] != '\0';i++)
+    {
+        if(s[i] == '(' || s[i] == '{' || s[i] == '[')
+        {
+            top++;
+            stack[top] = s[i];//左括号执行入栈操作
+        }
+        else
+        {
+            if(top == -1)//栈空直接返回false
+            {
+                free(stack);//先将stack内存释放
+                return false;
+            }
+            //栈非空
+            char left = stack[top];
+            if((left == '(' && s[i] != ')') || (left == '[' && s[i] != ']') || (left == '{' && s[i] != '}'))
+            {
+                free(stack);
+                return false;
+            }
+            top--;
+        }
+    }
+    free(stack);
+    return top == -1;
+}
