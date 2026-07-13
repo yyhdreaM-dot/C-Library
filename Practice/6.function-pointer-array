@@ -33,7 +33,7 @@ void Menu()
 int main()
 {
     Menu();
-    int (*pfArr[5])(int ,int) = {NULL,Add,Sub,Mul,Div};
+    int (*pfArr[5])(int ,int) = {NULL,Add,Sub,Mul,Div};//函数名不同 函数的参数和返回类型必须相同
     int input;
     printf("请输入要进行的运算：\n");
     scanf("%d",&input);
