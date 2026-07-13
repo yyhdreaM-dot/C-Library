@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int Add(int x,int y)
+{
+    return x + y;
+}
+
+int Sub(int x,int y)
+{
+    return x - y;
+}
+
+int Mul(int x,int y)
+{
+    return x * y;
+}
+
+int Div(int x,int y)
+{
+    if(y == 0)
+    return 0;
+    return x / y;
+}
+
+void Menu()
+{
+    printf("***************菜单****************\n");
+    printf("*****1.加法             2.减法*****\n");
+    printf("*****3.乘法             4.除法*****\n");
+    printf("***************0.退出**************\n");
+}
+
+int main()
+{
+    Menu();
+    int (*pfArr[5])(int ,int) = {NULL,Add,Sub,Mul,Div};
+    int input;
+    printf("请输入要进行的运算：\n");
+    scanf("%d",&input);
+    if(input == 0)
+    return 0;
+    printf("请输入两个操作数：\n");
+    int x,y;
+    scanf("%d %d",&x,&y);
+    int ret = (pfArr[input])(x,y);
+    printf("%d",ret);
+    return 0;
+}
