@@ -3,17 +3,18 @@
 #include <stdbool.h>
 bool isValid(char* s) {
     int len = strlen(s);//获取栈数组长度 最长不会超过字符串长度
-    char* stack = (char*)malloc(sizeof(char) * len);
+    char* stack = (char*)malloc(sizeof(char) * len);//开辟栈内存空间
     int top = -1;
     int i;
     for(i = 0;s[i] != '\0';i++)
     {
+        //左括号
         if(s[i] == '(' || s[i] == '{' || s[i] == '[')
         {
-            top++;
+            top++;//top始终指向栈顶元素
             stack[top] = s[i];//左括号执行入栈操作
         }
-        else
+        else//右括号
         {
             if(top == -1)//栈空直接返回false
             {
