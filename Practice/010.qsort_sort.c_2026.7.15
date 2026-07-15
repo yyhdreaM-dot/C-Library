@@ -30,6 +30,7 @@ int cmp_int(const void* e1,const void* e2)
 
 void test1()
 {
+    //升序
     int arr[10] = {9,8,7,6,5,4,3,2,1,0};
     int sz = sizeof(arr) / sizeof(arr[0]);
     print_arr(arr,sz);
@@ -59,9 +60,9 @@ int cmp_age(const void* e1,const void* e2)
 {
     struct Stu stu[3] = {{"zhangsan",19},{"lisi",21},{"wangwu"},17};
     int sz = sizeof(stu) / sizeof(stu[0]);
-    //按名字排序
+    //按名字排序（升序）
     qsort(stu,sz,sizeof(stu[0]),cmp_name);
-    //按年龄排序
+    //按年龄排序（升序）
     qsort(stu,sz,sizeof(stu[0]),cmp_age);
 }*/
 
