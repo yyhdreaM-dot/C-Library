@@ -11,6 +11,8 @@
     );*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 void print_arr(int* arr,int sz)
 {
     int i;
@@ -26,7 +28,7 @@ int cmp_int(const void* e1,const void* e2)
     return *(int*)e1 - *(int*)e2;
 }
 
-int main()
+void test1()
 {
     int arr[10] = {9,8,7,6,5,4,3,2,1,0};
     int sz = sizeof(arr) / sizeof(arr[0]);
@@ -35,5 +37,37 @@ int main()
     qsort(arr,sz,sizeof(arr[0]),cmp_int);
     //打印
     print_arr(arr,sz);
+}
+
+struct Stu
+{
+    char name[20];
+    int age;
+};
+
+int cmp_name(const void* e1,const void* e2)
+{
+    return strcmp(((struct Stu*)e1) -> name,((struct Stu*)e2) -> name);
+}
+
+int cmp_age(const void* e1,const void* e2)
+{
+    return (struct Stu*)e1 - (struct Stu*)e2;
+}
+
+/*void test2()
+{
+    struct Stu stu[3] = {{"zhangsan",19},{"lisi",21},{"wangwu"},17};
+    int sz = sizeof(stu) / sizeof(stu[0]);
+    //按名字排序
+    qsort(stu,sz,sizeof(stu[0]),cmp_name);
+    //按年龄排序
+    qsort(stu,sz,sizeof(stu[0]),cmp_age);
+}*/
+
+int main()
+{
+    test1();
+    test2();
     return 0;
 }
