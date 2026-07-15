@@ -32,17 +32,29 @@ void Menu()
 
 int main()
 {
-    Menu();
-    int (*pfArr[5])(int ,int) = {NULL,Add,Sub,Mul,Div};//函数名不同 函数的参数和返回类型必须相同
     int input;
-    printf("请输入要进行的运算：\n");
-    scanf("%d",&input);
-    if(input == 0)
-    return 0;
-    printf("请输入两个操作数：\n");
-    int x,y;
-    scanf("%d %d",&x,&y);
-    int ret = (pfArr[input])(x,y);
-    printf("%d",ret);
+    do{
+        Menu();
+        int (*pfArr[5])(int ,int) = {NULL,Add,Sub,Mul,Div};//函数名不同 函数的参数和返回类型必须相同
+        printf("请输入要进行的运算：\n");
+        scanf("%d",&input);
+        if(input > 0 && input <= 4)
+        {
+            printf("请输入两个操作数：\n");
+            int x,y;
+            scanf("%d %d",&x,&y);
+            int ret = (pfArr[input])(x,y);
+            printf("%d",ret);
+        }
+        else if(input == 0)
+        {
+            printf("退出\n");
+            break;
+        }
+        else
+        {
+            printf("输入错误\n");
+        }
+    }while(input);
     return 0;
 }
